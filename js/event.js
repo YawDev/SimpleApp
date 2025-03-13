@@ -4,14 +4,21 @@ const btnReset = document.getElementById("btn-reset");
 const inputBox = document.getElementById("formInput");
 
 const numOfClicksDisplay = document.getElementById('numberOfClicksTxt')
-sumClicks = 0
+sumClicks = 0;
+maxClicksAllowed = 10;
 
 
 btn.addEventListener('click', function (event) {
     event.preventDefault(); 
-    sumClicks++;
-    numOfClicksDisplay.innerText = 'Number of clicks: '+sumClicks
-    //alert(inputBox.value)
+    if (sumClicks == maxClicksAllowed)
+    {
+        alert('You have reached a maximum of 10 attempts to submit!')
+    }
+    else
+    {
+        sumClicks++;
+        numOfClicksDisplay.innerText = 'Number of clicks: '+sumClicks
+    }
 });
 
 
