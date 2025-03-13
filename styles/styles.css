@@ -7,6 +7,7 @@
 
 
 .container{
+    display: flexbox;
     position: relative;
     box-sizing: border-box;
     height: 250px;
@@ -17,6 +18,18 @@
     text-align: center;
     font-size: 1.5rem;
     color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-container
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    margin: 5px;
 }
 
 button{
@@ -24,18 +37,20 @@ button{
     border-radius: 5px;
     border: transparent;
     font-size: 1.5rem;
-    margin: 25px;
+    flex: 1 1 auto;
 }
 
 #btn{
     color: rgb(255, 255, 255);
     background-color: blueviolet;
+    display: inline;
    
 }
 
 #btn-reset{
     color: rgb(0, 0, 0);
     background-color: rgb(219, 219, 219);
+    display: inline;
 }
 
 #boxTitle{
@@ -53,4 +68,12 @@ button{
 
 #btn-reset:hover{
     background-color: rgb(98, 0, 255);
+}
+
+#btn:cursor{
+    background-color: rgb(122, 56, 119);
+}
+
+#btn-reset:focus{
+    background-color: rgb(255, 255, 255);
 }
