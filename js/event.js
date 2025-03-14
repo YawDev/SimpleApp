@@ -8,7 +8,7 @@ sumClicks = 0;
 maxClicksAllowed = 10;
 
 
-btn.addEventListener('click', function (event) {
+btn.addEventListener('click', (event) => {
     event.preventDefault(); 
     if (sumClicks == maxClicksAllowed)
     {
@@ -22,7 +22,7 @@ btn.addEventListener('click', function (event) {
 });
 
 
-btnReset.addEventListener('click', function (event) {
+btnReset.addEventListener('click',  (event) => {
     event.preventDefault(); 
     sumClicks = 0
     numOfClicksDisplay.innerText = 'Number of clicks: '+sumClicks
